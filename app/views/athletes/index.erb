@@ -1,0 +1,7 @@
+<ul>
+<% @athletes.each do |athlete| %>
+ <li>
+   <h4><a href="/athletes/<%= athlete.id %>"><%= athlete.name %></a></h4>
+ </li>
+<% end %>
+</ul>
