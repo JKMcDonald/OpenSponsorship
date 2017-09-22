@@ -7,8 +7,16 @@ get "/athletes/create" do
   erb :"athletes/new"
 end
 
+get "/athletes/:id" do
+    @athlete = Athlete.find(params[:id])
+    if request.xhr?
+      erb :"/athletes/show", layout: false
+    else
+      erb :"/athletes/show"
+    end
+end
+
 post "/athletes" do
-  
   @athlete = Athlete.new(params[:athlete])
     if @athlete.save
       if request.xhr?
@@ -21,13 +29,4 @@ post "/athletes" do
     end
   end
 
-  get "/athletes/:id" do
-    @athlete = Athlete.find(params[:id])
-    if request.xhr?
-      erb :"/athletes/show", layout: false
-    else
-      erb :"/athletes/show"
-    end
-  end
-
-  put "/athletes"
+ 

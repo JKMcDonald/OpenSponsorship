@@ -17,7 +17,7 @@ require 'logger'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
-
+require_relative "../app/models/Athlete"
 require 'erb'
 
 # Some helper constants for path-centric logic
