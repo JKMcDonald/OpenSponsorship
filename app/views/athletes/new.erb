@@ -1,0 +1,132 @@
+<form id="new-athlete-form" class="flex flex-row" method="post" action="/athletes">
+
+
+  <label class="input-group col-1-3">
+  <span class="input-group-label">Name:</span>
+    <input id="athlete-name" class="input-group-input" type="text" name="athlete[name]" value="<%= @athlete.try(:name) %>">
+  </label>
+<div>
+  <label class="input-group col-1-3">
+   <span class="input-group-label">Date Of Birth:</span>
+    <input id="athlete-date_of_birth" class="input-group-input" type="text" name="athlete[date_of_birth]" value="<%= @athlete.try(:date_of_birth) %>">
+  </label>
+<div>
+  <label class="input-group col-1-3">
+     <span class="input-group-label">Nationality:</span>
+    <input id="athlete-nationality" class="input-group-input" type="text" name="athlete[nationality]" value="<%= @athlete.try(:nationality) %>">
+  </label>
+<div>
+    <label class="input-group col-1-3">
+      <span class="input-group-label">Location:</span>
+    <input id="athlete-location" class="input-group-input" type="text" name="athlete[location]" value="<%= @athlete.try(:location) %>">
+  </label>
+<div>
+    <label class="input-group col-1-3">
+       <span class="input-group-label">Association:</span>
+    <input id="athlete-association" class="input-group-input" type="text" name="athlete[association]" value="<%= @athlete.try(:association) %>">
+  </label>
+<div>
+    <label class="input-group col-1-3">
+    <span class="input-group-label">Team:</span>
+    <input id="athlete-team" class="input-group-input" type="text" name="athlete[team]" value="<%= @athlete.try(:team) %>">
+  </label>
+<div>
+ <label class="input-group col-1-3">
+    <span class="input-group-label">Sport:</span>
+    <select id="athlete-sport" class="input-group-input" name="athlete[sport]">
+    <option value="Golf">Golf</option>
+    <option value="Tennis">Tennis</option>
+    <option value="Cricket">Cricket</option>
+    <option value="Basketball">Basketball</option>
+    <option value="Baseball">Baseball</option>
+    <option value="American Football">American Football</option>
+    <option value="Aquatics">Aquatics</option>
+    <option value="Archery">Archery</option>
+    <option value="Automobile Racing">Automobile Racing</option>
+    <option value="Badminton">Badminton</option>
+    <option value="Beach Volleyball">Beach Volleyball</option>
+    <option value="Bobsleigh">Bobsleigh</option>
+    <option value="Body Building">Body Building</option>
+    <option value="Boxing">Boxing</option>
+    <option value="Cross Country Running">Cross Country Running</option>
+    <option value="Cross Country Skiing">Cross Country Skiing</option>
+    <option value="Curling">Curling</option>
+    <option value="Cycling">Cycling</option>
+    <option value="Darts">Darts</option>
+    <option value="Decathlon">Decathlon</option>
+    <option value="Down Hill Skiing">Down Hill Skiing</option>
+    <option value="Equestrianism">Equestrianism</option>
+    <option value="eSports">eSports</option>
+    <option value="Fencing">Fencing</option>
+    <option value="Field Hockey">Field Hockey</option>
+    <option value="Figure Skating">Figure Skating</option>
+    <option value="Gymnastics">Gymnastics</option>
+    <option value="Ice Hockey">Ice Hockey</option>
+    <option value="Martial Arts">Martial Arts</option>
+    <option value="Mixed Martial Arts">Mixed Martial Arts</option>
+    <option value="Modern Pentathlon">Modern Pentathlon</option>
+    <option value="Motorcycle Racing">Motorcycle Racing</option>
+    <option value="Netball">Netball</option>
+    <option value="Polo">Polo</option>
+    <option value="Racquetball">Racquetball</option>
+    <option value="Rowing">Rowing</option>
+    <option value="Rugby">Rugby</option>
+    <option value="Sailing">Sailing</option>
+    <option value="Softball">Softball</option>
+    <option value="Shooting">Shooting</option>
+    <option value="Skateboarding">Skateboarding</option>
+    <option value="Skeet Shooting">Skeet Shooting</option>
+    <option value="Skeleton">Skeleton</option>
+    <option value="Snow Boarding">Snow Boarding</option>
+    <option value="Soccer">Soccer</option>
+    <option value="Squash">Squash</option>
+    <option value="Surfing">Surfing</option>
+    <option value="Swimming">Swimming</option>
+    <option value="Track and Field">Track and Field</option>
+    </select>
+  </label>
+<div>
+    <label class="input-group col-1-3">
+   <span class="input-group-label">Gender:</span>
+    <input id="athlete-gender" class="input-group-input" type="text" name="athlete[gender]" value="<%= @athlete.try(:gender) %>">
+  </label>
+<div>
+    <label class="input-group col-1-3">
+    <span class="input-group-label">About:</span>
+    <input id="athlete-about" class="input-group-input" type="text" name="athlete[about]" value="<%= @athlete.try(:about) %>">
+  </label>
+<div>
+   <label class="input-group col-1-3">
+    <span class="input-group-label">Interests:</span>
+    <input id="athlete-interests" class="input-group-input" type="text" name="athlete[interests]" value="<%= @athlete.try(:interests) %>">
+  </label>
+<div>
+  <label class="input-group col-1-3">
+   <span class="input-group-label">Charities:</span>
+    <input id="athlete-charities" class="input-group-input" type="text" name="athlete[charities]" value="<%= @athlete.try(:charities) %>">
+  </label>
+<div>
+   <label class="input-group col-1-3">
+  <span class="input-group-label">Social Media Handles:</span>
+    <input id="athlete-social_media_handles" class="input-group-input" type="text" name="athlete[social_media_handles]" value="<%= @athlete.try(:social_media_handles) %>">
+  </label>
+<div>
+  <label class="input-group col-1-3">
+   <span class="input-group-label">Pets:</span>
+    <input id="athlete-pets" class="input-group-input" type="text" name="athlete[pets]" value="<%= @athlete.try(:pets) %>">
+  </label>
+<div>
+  <label class="input-group col-1-3">
+    <span class="input-group-label">Drinks Alcohol:</span>
+    <input id="athlete-drinks_alcohol" class="input-group-input" type="hidden" name="athlete[drinks_alcohol]" value="false">
+    <input id="athlete-drinks_alcohol" class="input-group-input" type="checkbox" name="athlete[drinks_alcohol]" value="true">
+  </label>
+<div>
+   <label class="input-group col-1-3">
+  <span class="input-group-label">Married:</span>
+    <input id="athlete-married" class="input-group-input" type="hidden" name="athlete[married]" value="false">
+    <input id="athlete-married" class="input-group-input" type="checkbox" name="athlete[married]" value="true">
+  </label>
+<div>
+  <button type="submit" class="button dark" id="form-submit-button">Submit</button>
+</form>
